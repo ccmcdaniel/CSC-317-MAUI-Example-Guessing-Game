@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CSC_317_MAUI_Example_Guessing_Game.MainPage"
+             Title="Guessing Game!">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10">
+            <HorizontalStackLayout Padding="25" HorizontalOptions="Center">
+                <Label 
+                    Text="Guess my number!   Type your guess in the box below and I will tell you whether your next guess needs to be higher or lower."
+                    MaximumWidthRequest="250"    
+                    HorizontalTextAlignment="Center"
+                />
+            </HorizontalStackLayout>
+
+            <Entry 
+                x:Name="txtInput"
+                Placeholder="..."
+                MaximumWidthRequest="150"
+                />
+            <Button
+                x:Name="btnGuess"
+                Text="Submit Guess"
+                MaximumWidthRequest="150"
+                Clicked="OnGuessClick"
+                />
+            <Label
+                x:Name="lblArrow"
+                Text="---"
+                FontSize="100"
+                HorizontalTextAlignment="Center"
+            />
+            <Label
+                x:Name="lblHint"
+                Text="hint box"
+                FontSize="25"
+                HorizontalTextAlignment="Center"
+            />
+
+            <Label
+                Margin="10"
+                x:Name="lblGuessesLeft"
+                Text="RemainingGuesses: "
+                FontSize="18"
+                HorizontalTextAlignment="Center"
+            />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
